@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Seyir Restorant Rezervasyon - Online masa ayırtın. Özel etkinlikleriniz için bizi arayın.">
+    <meta name="keywords"
+        content="seyir restorant izmir, meyhane izmir, restorant hipodrom, restorant hipodrom, meyhane izmir, hipodrom meyhane, hipodrom mekan, seyir meyhane">
+    <title>Rezervasyon | Seyir Restorant</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="loader-logo"><img src="images/logo.png" alt="Seyir Restorant Yükleme Logosu" width="300" height="300"></div>
+            <div class="loader-bar" style="margin: 0 auto;"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <div class="logo-icon"><img src="images/logo.png" alt="Seyir Restorant Logo" width="50" height="50"></div>
+                <div class="brand-text">
+                    <span class="brand-name">SEYİR</span>
+                    <span class="brand-tagline">Restorant & Meyhane</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="menu.html">Menü</a>
+                <a href="rezervasyon.html" class="btn-rezervasyon active">Rezervasyon</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Temayı değiştir">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg"
+            style="background-image: url('images/rezervasyon.jpeg');">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <span class="script-text">Yerinizi Ayırtın</span>
+            <h1>Rezervasyon</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Ana Sayfa</a>
+                <span>/</span>
+                <span>Rezervasyon</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rezervasyon İçerik -->
+    <section class="reservation-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="script-title">Rezervasyon</span>
+                <h2>Masanızı Ayırtın</h2>
+                <div class="divider">
+                    <span></span>
+                    <i class="fas fa-calendar-check"></i>
+                    <span></span>
+                </div>
+                <p>Unutulmaz bir yemek deneyimi için masanızı şimdiden ayırtın</p>
+            </div>
+
+            <div class="reservation-grid">
+                <!-- Rezervasyon Formu -->
+                <div class="reservation-form-card reveal">
+                    <h3>Online Rezervasyon Formu</h3>
+                    <form id="reservationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rez-name">Adınız Soyadınız *</label>
+                                <input type="text" id="rez-name" placeholder="Adınızı giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rez-phone">Telefon Numaranız *</label>
+                                <input type="tel" id="rez-phone" placeholder="(5xx) xxx xx xx" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rez-email">E-posta Adresiniz</label>
+                                <input type="email" id="rez-email" placeholder="E-posta adresinizi giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="rez-guests">Kişi Sayısı *</label>
+                                <select id="rez-guests" required>
+                                    <option value="">Seçiniz...</option>
+                                    <option value="2">2 Kişi</option>
+                                    <option value="3">3 Kişi</option>
+                                    <option value="4">4 Kişi</option>
+                                    <option value="5">5 Kişi</option>
+                                    <option value="6">6 Kişi</option>
+                                    <option value="7">7 Kişi</option>
+                                    <option value="8">8 Kişi</option>
+                                    <option value="10">10 Kişi</option>
+                                    <option value="12">12 Kişi</option>
+                                    <option value="15">15 Kişi</option>
+                                    <option value="20">20+ Kişi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rez-date">Tarih *</label>
+                                <input type="date" id="rez-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rez-time">Saat *</label>
+                                <select id="rez-time" required>
+                                    <option value="">Seçiniz...</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="22:30">22:30</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rez-occasion">Özel Gün</label>
+                            <select id="rez-occasion">
+                                <option value="">Yok</option>
+                                <option value="dogum-gunu">Doğum Günü</option>
+                                <option value="yildonumu">Yıl Dönümü</option>
+                                <option value="evlilik-teklifi">Evlilik Teklifi</option>
+                                <option value="is-yemegi">İş Yemeği</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="rez-notes">Özel İstekleriniz</label>
+                            <textarea id="rez-notes"
+                                placeholder="Özel diyet tercihleri, alerjiler, dekorasyon istekleri, vb..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-calendar-check"></i> Rezervasyon Yap
+                        </button>
+                    </form>
+                    <!-- Başarı Mesajı -->
+                    <div class="form-success" id="reservationSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Rezervasyonunuz Alındı!</h3>
+                        <p>En kısa sürede onay mesajı tarafınıza iletilecektir. Bizi tercih ettiğiniz için teşekkür ederiz.</p>
+                    </div>
+                </div>
+
+                <!-- Bilgi Paneli -->
+                <div class="reservation-info reveal">
+                    <h3>Rezervasyon Bilgileri</h3>
+                    <p>
+                        Seyir Restorant'ta size özel bir masa ayırtmak için formumuzu kullanabilir veya bizi
+                        doğrudan arayabilirsiniz. Rezervasyon onayınız en geç 2 saat içinde tarafınıza iletilecektir.
+                    </p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-users"></i><span>2 ile 20 kişi arası gruplar rezervasyon yapabilir</span></li>
+                        <li><i class="fas fa-clock"></i><span>Rezervasyonlar en az 2 saat öncesinden yapılmalıdır</span></li>
+                        <li><i class="fas fa-calendar-alt"></i><span>30 güne kadar ileri tarihli rezervasyon kabul edilir</span></li>
+                        <li><i class="fas fa-phone"></i><span>Acil rezervasyon: <a href="tel:+905076985076" style="color: var(--primary-red);">+90 (507) 698 50 76</a></span></li>
+                        <li><i class="fab fa-whatsapp"></i><span>WhatsApp: <a href="https://wa.me/905076985076" target="_blank" style="color: var(--primary-red);">+90 (507) 698 50 76</a></span></li>
+                        <li><i class="fas fa-info-circle"></i><span>15 dakikadan fazla gecikmede masa iptal edilebilir</span></li>
+                    </ul>
+                    <div class="special-note">
+                        <h4><i class="fas fa-birthday-cake"></i> Özel Günler</h4>
+                        <p>Doğum günü, yıl dönümü veya kurumsal etkinlik gibi özel günleriniz için özel düzenlemeler yapabiliriz. Detaylar için iletişime geçebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA - Telefon Bandı -->
+    <section class="cta-section">
+        <div class="cta-bg"
+            style="background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)), url('images/hemenarayın.jpeg') center/cover no-repeat fixed;">
+        </div>
+        <div class="cta-content container reveal">
+            <span class="script-text">Hızlı Rezervasyon</span>
+            <h2>Hemen Arayın</h2>
+            <p>Online form yerine hızlıca telefonla da rezervasyon yapabilirsiniz. Size en uygun masayı ayıralım.</p>
+            <a href="tel:+905076985076" class="btn-primary">
+                <i class="fas fa-phone-alt"></i> +90 (507) 698 50 76
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <div class="logo-icon"><img src="images/logo.png" alt="Seyir Restorant Logo" width="60" height="60" loading="lazy"></div>
+                        <h3>Seyir Restorant</h3>
+                    </div>
+                    <p>İzmir'in dinamik ruhunu ve Ege'nin kadim lezzetlerini, modern bir sunumla Buca'nın kalbinde buluşturuyoruz. 
+                        2018'den bu yana her masada yeni bir hikaye yazmaya devam ediyoruz.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/seyirrestoran?igsh=MXRtNHVndGs3b2hhMg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/905076985076" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menümüz</a></li>
+                        <li><a href="rezervasyon.html"><i class="fas fa-chevron-right"></i> Rezervasyon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="tel:+905336564338"><i class="fas fa-phone"></i> +90 (533) 656 43 38</a></li>
+                        <li><a href="tel:+905076985076"><i class="fas fa-phone"></i> +90 (507) 698 50 76</a></li>
+                        <li><a href="mailto:restorantseyir@gmail.com"><i class="fas fa-envelope"></i> restorantseyir@gmail.com</a></li>
+                        <li><a href="https://maps.google.com/maps?q=Aydın+Hatboyu+Cd.+275B+Buca+İzmir" target="_blank"><i class="fas fa-map-marker-alt"></i> Aydın Hatboyu Cd. 275B, Buca/İzmir</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Çalışma Saatleri</h4>
+                    <ul class="footer-hours">
+                        <li><span>Pazartesi - Cuma</span> <span>12:00 - 00:00</span></li>
+                        <li><span>Cumartesi</span> <span>12:00 - 02:00</span></li>
+                        <li><span>Pazar</span> <span>12:00 - 23:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Seyir Restorant. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
